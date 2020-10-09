@@ -15,7 +15,7 @@ spec:
   values:
     image:
       repository: madpearl/podinfo
-      tag: stg-uiewokj2
+      tag: hotfix-sha
     replicaCount: 2
     hpa:
       enabled: true

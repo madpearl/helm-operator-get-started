@@ -2,12 +2,12 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: podinfo-hotfix
-  namespace: stg
+  namespace: hotfix
   annotations:
     fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: glob:hotfix-*
 spec:
-  releaseName: podinfo-rc
+  releaseName: podinfo-hotfix
   chart:
     git: git@github.com:fluxcd/helm-operator-get-started
     path: charts/podinfo
@@ -15,7 +15,7 @@ spec:
   values:
     image:
       repository: madpearl/podinfo
-      tag: hotfix-sha
+      tag: hotfix-ewqa7mye
     replicaCount: 2
     hpa:
       enabled: true
